@@ -1,0 +1,20 @@
+{
+  "id": "cast_youtube",
+  "title": {
+    "en": "Show YouTube"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=Chromecast"
+    },
+    {
+      "name": "videoId",
+      "type": "text",
+      "placeholder": {
+        "en": "videoId"
+      }
+    }
+  ]
+}

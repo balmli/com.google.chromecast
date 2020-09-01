@@ -1,0 +1,13 @@
+{
+  "id": "Available_Interval",
+  "type": "number",
+  "label": {
+    "en": "Available interval"
+  },
+  "value": 30,
+  "min": 10,
+  "max": 3600,
+  "hint": {
+    "en": "Available interval (seconds)"
+  }
+}

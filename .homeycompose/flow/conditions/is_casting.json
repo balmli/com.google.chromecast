@@ -1,0 +1,13 @@
+{
+  "id": "is_casting",
+  "title": {
+    "en": "Is !{{casting|not casting}}"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=Chromecast"
+    }
+  ]
+}

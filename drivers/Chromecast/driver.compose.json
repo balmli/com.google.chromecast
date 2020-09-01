@@ -1,0 +1,42 @@
+{
+  "id": "Chromecast",
+  "name": {
+    "en": "Chromecast"
+  },
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "class": "other",
+  "capabilities": [
+    "speaker_prev",
+    "speaker_playing",
+    "speaker_next",
+
+    "speaker_artist",
+    "speaker_album",
+    "speaker_track",
+    "speaker_duration",
+    "speaker_position",
+
+    "volume_set",
+    "volume_up",
+    "volume_down",
+    "volume_mute"
+  ],
+  "discovery": "chromecast_mdns",
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_my_devices"
+      }
+    },
+    {
+      "id": "add_my_devices",
+      "template": "add_devices"
+    }
+  ]
+}

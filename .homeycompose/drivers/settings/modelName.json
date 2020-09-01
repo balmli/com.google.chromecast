@@ -1,0 +1,8 @@
+{
+	"id": "modelName",
+	"type": "label",
+	"label": {
+		"en": "Model"
+	},
+	"value": ""
+}

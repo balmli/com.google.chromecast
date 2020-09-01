@@ -1,0 +1,29 @@
+{
+  "id": "stopped_casting",
+  "title": {
+    "en": "Stopped casting"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=Chromecast"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "appId",
+      "title": {
+        "en": "App id"
+      },
+      "type": "string"
+    },
+    {
+      "name": "displayName",
+      "title": {
+        "en": "App name"
+      },
+      "type": "string"
+    }
+  ]
+}

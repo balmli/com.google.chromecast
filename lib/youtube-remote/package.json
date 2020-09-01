@@ -1,0 +1,64 @@
+{
+  "_from": "youtube-remote@^1.0.2",
+  "_id": "youtube-remote@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-IR7OtIuk7NA4wcrRDBbWtLQtM/hcZdtrxgelAwzajvrzzbwGFTf1O+yDzhUWcqOdw2QAp8fKXxS4QQR3e3k24A==",
+  "_location": "/youtube-remote",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "youtube-remote@^1.0.2",
+    "name": "youtube-remote",
+    "escapedName": "youtube-remote",
+    "rawSpec": "^1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/youtube-remote/-/youtube-remote-1.0.2.tgz",
+  "_shasum": "873acdd3b206762da011ebdb6a61284454418bc8",
+  "_spec": "youtube-remote@^1.0.2",
+  "_where": "/Users/bjornar/homey/com.google.chromecast",
+  "author": {
+    "name": "Alex",
+    "email": "alxmorais8@msn.com"
+  },
+  "bugs": {
+    "url": "https://github.com/alxhotel/youtube-remote/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "needle": "^2.5.0"
+  },
+  "deprecated": false,
+  "description": "Youtube Leanback API wrapper",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  },
+  "homepage": "https://github.com/alxhotel/youtube-remote#readme",
+  "keywords": [
+    "youtube",
+    "remote",
+    "cast",
+    "api",
+    "wrapper",
+    "player",
+    "lounge",
+    "token"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "youtube-remote",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxhotel/youtube-remote.git"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "version": "1.0.2"
+}

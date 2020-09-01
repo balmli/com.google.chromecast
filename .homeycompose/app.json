@@ -1,0 +1,50 @@
+{
+  "id": "com.google.chromecast2",
+  "version": "0.0.1",
+  "compatibility": ">=3.0.0",
+  "sdk": 2,
+  "brandColor": "#0BB0DD",
+  "name": {
+    "en": "Google Chromecast Alternative"
+  },
+  "description": {
+    "en": "Play stuff on your Chromecast"
+  },
+  "category": [
+    "video"
+  ],
+  "tags": {
+    "en": [
+      "chromecast"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/com.google.chromecast2/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/com.google.chromecast2"
+}

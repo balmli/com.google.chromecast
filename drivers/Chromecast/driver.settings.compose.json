@@ -1,0 +1,14 @@
+[
+  {
+    "$extends": "modelName",
+    "id": "modelName"
+  },
+  {
+    "$extends": "ipaddress",
+    "id": "ipaddress"
+  },
+  {
+    "$extends": "Available_Interval",
+    "id": "Available_Interval"
+  }
+]

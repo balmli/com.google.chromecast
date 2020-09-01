@@ -1,0 +1,8 @@
+{
+	"id": "ipaddress",
+	"type": "label",
+	"label": {
+		"en": "IP address"
+	},
+	"value": ""
+}

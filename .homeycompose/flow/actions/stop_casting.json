@@ -1,0 +1,16 @@
+{
+  "id": "stop_casting",
+  "title": {
+    "en": "Stop casting"
+  },
+  "hint": {
+    "en": "Stop casting"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=Chromecast"
+    }
+  ]
+}

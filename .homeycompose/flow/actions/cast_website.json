@@ -1,0 +1,20 @@
+{
+  "id": "cast_website",
+  "title": {
+    "en": "Cast a website"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=Chromecast"
+    },
+    {
+      "name": "website",
+      "type": "text",
+      "placeholder": {
+        "en": "https://www.google.com"
+      }
+    }
+  ]
+}

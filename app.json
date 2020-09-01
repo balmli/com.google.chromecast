@@ -1,0 +1,268 @@
+{
+  "id": "com.google.chromecast2",
+  "version": "0.0.1",
+  "compatibility": ">=3.0.0",
+  "sdk": 2,
+  "brandColor": "#0BB0DD",
+  "name": {
+    "en": "Google Chromecast Alternative"
+  },
+  "description": {
+    "en": "Play stuff on your Chromecast"
+  },
+  "category": [
+    "video"
+  ],
+  "tags": {
+    "en": [
+      "chromecast"
+    ]
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Bjørnar Almli",
+    "email": "bjornar.almli@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjørnar Almli",
+        "email": "bjornar.almli@gmail.com"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "bjornaralmli"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/balmli/com.google.chromecast2/issues"
+  },
+  "homeyCommunityTopicId": 0,
+  "source": "https://github.com/balmli/com.google.chromecast2",
+  "flow": {
+    "triggers": [
+      {
+        "id": "started_casting",
+        "title": {
+          "en": "Started casting"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "appId",
+            "title": {
+              "en": "App id"
+            },
+            "type": "string"
+          },
+          {
+            "name": "displayName",
+            "title": {
+              "en": "App name"
+            },
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "id": "stopped_casting",
+        "title": {
+          "en": "Stopped casting"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "appId",
+            "title": {
+              "en": "App id"
+            },
+            "type": "string"
+          },
+          {
+            "name": "displayName",
+            "title": {
+              "en": "App name"
+            },
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "is_casting",
+        "title": {
+          "en": "Is !{{casting|not casting}}"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "cast_website",
+        "title": {
+          "en": "Cast a website"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          },
+          {
+            "name": "website",
+            "type": "text",
+            "placeholder": {
+              "en": "https://www.google.com"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cast_youtube",
+        "title": {
+          "en": "Show YouTube"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          },
+          {
+            "name": "videoId",
+            "type": "text",
+            "placeholder": {
+              "en": "videoId"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stop_casting",
+        "title": {
+          "en": "Stop casting"
+        },
+        "hint": {
+          "en": "Stop casting"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=Chromecast"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "Chromecast",
+      "name": {
+        "en": "Chromecast"
+      },
+      "icon": "/drivers/Chromecast/assets/icon.svg",
+      "images": {
+        "large": "/drivers/Chromecast/assets/images/large.png",
+        "small": "/drivers/Chromecast/assets/images/small.png"
+      },
+      "class": "other",
+      "capabilities": [
+        "speaker_prev",
+        "speaker_playing",
+        "speaker_next",
+        "speaker_artist",
+        "speaker_album",
+        "speaker_track",
+        "speaker_duration",
+        "speaker_position",
+        "volume_set",
+        "volume_up",
+        "volume_down",
+        "volume_mute"
+      ],
+      "discovery": "chromecast_mdns",
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_my_devices"
+          }
+        },
+        {
+          "id": "add_my_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "modelName",
+          "type": "label",
+          "label": {
+            "en": "Model"
+          },
+          "value": ""
+        },
+        {
+          "id": "ipaddress",
+          "type": "label",
+          "label": {
+            "en": "IP address"
+          },
+          "value": ""
+        },
+        {
+          "id": "Available_Interval",
+          "type": "number",
+          "label": {
+            "en": "Available interval"
+          },
+          "value": 30,
+          "min": 10,
+          "max": 3600,
+          "hint": {
+            "en": "Available interval (seconds)"
+          }
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "chromecast_mdns": {
+      "type": "mdns-sd",
+      "mdns-sd": {
+        "name": "googlecast",
+        "protocol": "tcp"
+      },
+      "id": "{{txt.id}}"
+    }
+  }
+}
